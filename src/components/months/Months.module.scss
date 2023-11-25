@@ -1,0 +1,14 @@
+@import '@/styles/mixins';
+
+.nav {
+  width: 100%;
+  color: $navColor;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    margin-left: 40px;
+  }
+}

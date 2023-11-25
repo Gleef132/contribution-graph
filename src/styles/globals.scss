@@ -1,0 +1,15 @@
+@import 'null';
+@import 'mixins';
+
+// global styles
+body {
+	font-family: var(--inter);
+	background: #000;
+	color: $textColorPrimary;
+}
+
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0px auto;
+	padding: 0 15px;
+}

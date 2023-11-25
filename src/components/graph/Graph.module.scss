@@ -1,0 +1,48 @@
+@import '@/styles/mixins';
+
+.graph {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $textColorSecondary;
+  user-select: none;
+
+  &__body {
+    max-width: 1120px;
+    width: 100%;
+    height: 280px;
+    background: #fff;
+    font-weight: 500;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    margin-top: 15px;
+  }
+
+  &__weeks {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 20px;
+  }
+
+  &__days {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 10px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 2px;
+
+    span {
+      margin: 0 10px;
+    }
+  }
+}
