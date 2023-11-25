@@ -41,11 +41,11 @@ const Graph: FC<IGraphProps> = (data) => {
         </div>
         <div className={cl.graph__item}>
           <span>Меньше</span>
-          <Day contribution={'No Contribution'} color={getColor(0)} />
-          <Day contribution={'1-9 Contributions'} color={getColor(1)} />
-          <Day contribution={'10-19 Contributions'} color={getColor(10)} />
-          <Day contribution={'20-29 Contributions'} color={getColor(20)} />
-          <Day contribution={'30+ Contributions'} color={getColor(30)} />
+          <Day contribution={'0'} color={getColor(0)} />
+          <Day contribution={'1-9'} color={getColor(1)} />
+          <Day contribution={'10-19'} color={getColor(10)} />
+          <Day contribution={'20-29'} color={getColor(20)} />
+          <Day contribution={'30+'} color={getColor(30)} />
           <span>Больше</span>
         </div>
         <Helper />
