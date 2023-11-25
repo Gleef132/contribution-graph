@@ -25,8 +25,6 @@ const Graph: FC<IGraphProps> = (data) => {
   const weeks = divisionIntoSubarrays(getDays(data), 7).reverse()
   const months = getMonts()
 
-  console.log(weeks)
-
   return (
     <div className={cl.graph} onClick={() => dispatch(hiddenHelper())}>
       <div className={cl.graph__body}>
