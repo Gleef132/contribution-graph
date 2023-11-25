@@ -25,30 +25,34 @@ const Graph: FC<IGraphProps> = (data) => {
   const weeks = divisionIntoSubarrays(getDays(data), 7).reverse()
   const months = getMonts()
 
+  console.log(weeks)
+
   return (
     <div className={cl.graph} onClick={() => dispatch(hiddenHelper())}>
       <div className={cl.graph__body}>
-        <Months months={months} />
-        <div className={cl.graph__content}>
-          <ul className={cl.graph__days}>
-            <li className={cl.graph__day}>Пн</li>
-            <li className={cl.graph__day}>Ср</li>
-            <li className={cl.graph__day}>Пт</li>
-          </ul>
-          <div className={cl.graph__weeks}>
-            {weeks.map(item => <Week key={'' + Math.random() * 10000} data={item} />)}
+        <div>
+          <Months months={months} />
+          <div className={cl.graph__content}>
+            <ul className={cl.graph__days}>
+              <li className={cl.graph__day}>Пн</li>
+              <li className={cl.graph__day}>Ср</li>
+              <li className={cl.graph__day}>Пт</li>
+            </ul>
+            <div className={cl.graph__weeks}>
+              {weeks.map(item => <Week key={'' + Math.random() * 10000} data={item} />)}
+            </div>
           </div>
+          <div className={cl.graph__item}>
+            <span>Меньше</span>
+            <Day contribution={'0'} color={getColor(0)} />
+            <Day contribution={'1-9'} color={getColor(1)} />
+            <Day contribution={'10-19'} color={getColor(10)} />
+            <Day contribution={'20-29'} color={getColor(20)} />
+            <Day contribution={'30+'} color={getColor(30)} />
+            <span>Больше</span>
+          </div>
+          <Helper />
         </div>
-        <div className={cl.graph__item}>
-          <span>Меньше</span>
-          <Day contribution={'0'} color={getColor(0)} />
-          <Day contribution={'1-9'} color={getColor(1)} />
-          <Day contribution={'10-19'} color={getColor(10)} />
-          <Day contribution={'20-29'} color={getColor(20)} />
-          <Day contribution={'30+'} color={getColor(30)} />
-          <span>Больше</span>
-        </div>
-        <Helper />
       </div>
     </div>
   )
