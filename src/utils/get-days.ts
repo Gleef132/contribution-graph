@@ -10,7 +10,7 @@ interface IData {
 export const getDays = ({ data }: IData): IDay[] => {
   const result = []
   const dataKeys = Object.keys(data).reverse()
-  const date = new Date()
+  const date = new Date(2023, 10, 25)
   let year = date.getFullYear()
   let number = date.getDate()
   let month = date.getMonth()
